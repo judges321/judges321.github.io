@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Cocoa依赖管理工具 | 承宇的小窝</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="依赖管理标准工具CocoaPods在终端中进入（cd命令）你项目所在目录，然后在当前目录下，利用vim创建Podfile，运行：
+$ vim Podfile
+然后在Podfile文件中输入以下文字：12345platform :ios, &apos;8.0&apos;use_frameworks!target ‘MyApp’ dopod &apos;Alamofire&apos;end
+这段文字可以在Alamofire的github页面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cocoa依赖管理工具">
+<meta property="og:url" content="http://wangxinze.com/2015/12/09/Cocoa依赖管理工具/index.html">
+<meta property="og:site_name" content="承宇的小窝">
+<meta property="og:description" content="依赖管理标准工具CocoaPods在终端中进入（cd命令）你项目所在目录，然后在当前目录下，利用vim创建Podfile，运行：
+$ vim Podfile
+然后在Podfile文件中输入以下文字：12345platform :ios, &apos;8.0&apos;use_frameworks!target ‘MyApp’ dopod &apos;Alamofire&apos;end
+这段文字可以在Alamofire的github页面">
+<meta property="og:updated_time" content="2016-01-08T13:31:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cocoa依赖管理工具">
+<meta name="twitter:description" content="依赖管理标准工具CocoaPods在终端中进入（cd命令）你项目所在目录，然后在当前目录下，利用vim创建Podfile，运行：
+$ vim Podfile
+然后在Podfile文件中输入以下文字：12345platform :ios, &apos;8.0&apos;use_frameworks!target ‘MyApp’ dopod &apos;Alamofire&apos;end
+这段文字可以在Alamofire的github页面">
+  
+    <link rel="alternative" href="/atom.xml" title="承宇的小窝" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/3.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">承宇</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">云霏霏而承宇</p>
+		
+				
+
+
+		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:wangxinze@betahouse.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/judges321" title="GitHub"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/QRcode/" style="font-size: 10px;">QRcode</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zhouyutao.com">zhouyutao</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://huangbingbing.com">huangbingbing</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">专注于iOS</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">承宇</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/3.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">承宇</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">云霏霏而承宇</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:wangxinze@betahouse.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/judges321" title="GitHub"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Cocoa依赖管理工具" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/09/Cocoa依赖管理工具/" class="article-date">
+  	<time datetime="2015-12-09T05:41:53.000Z" itemprop="datePublished">2015-12-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Cocoa依赖管理工具
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h2 id="u4F9D_u8D56_u7BA1_u7406_u6807_u51C6_u5DE5_u5177CocoaPods"><a href="#u4F9D_u8D56_u7BA1_u7406_u6807_u51C6_u5DE5_u5177CocoaPods" class="headerlink" title="依赖管理标准工具CocoaPods"></a>依赖管理标准工具CocoaPods</h2><p>在终端中进入（cd命令）你项目所在目录，然后在当前目录下，利用vim创建Podfile，运行：</p>
+<p><code>$ vim Podfile</code></p>
+<p>然后在Podfile文件中输入以下文字：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">platform <span class="symbol">:ios</span>, <span class="string">'8.0'</span></span><br><span class="line">use_frameworks!</span><br><span class="line">target ‘<span class="constant">MyApp’</span> <span class="keyword">do</span></span><br><span class="line">pod <span class="string">'Alamofire'</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>这段文字可以在Alamofire的github页面找到。</p>
+<p>然后按ESC保存退出。vim环境下，保存退出命令是：</p>
+<p><code>:wq</code></p>
+<p>这时候，你会发现你的项目目录中，出现一个名字为Podfile的文件，而且文件内容就是你刚刚输入的内容。注意，Podfile文件应该和你的工程文件.xcodeproj在同一个目录下。</p>
+<a id="more"></a>
+<p>这时候，你就可以利用CocoPods下载Alamofire类库了。还是在终端中的当前项目目录下，运行以下命令：</p>
+<p><code>$ pod install</code></p>
+<p>因为是在你的项目中导入Alamofire，这就是为什么这个命令需要你进入你的项目所在目录中运行。</p>
+<p>运行上述命令之后，终端出现以下信息：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Updating <span class="keyword">local</span> specs repositories</span><br><span class="line">Analyzing dependencies</span><br><span class="line">Downloading dependencies</span><br><span class="line">Using Alamofire (<span class="number">3.1</span><span class="number">.3</span>)</span><br><span class="line">Generating Pods project</span><br><span class="line">Integrating client project</span><br><span class="line">Sending stats</span><br><span class="line">Sending stats</span><br><span class="line">Pod installation complete! There <span class="keyword">is</span> <span class="number">1</span> dependency <span class="keyword">from</span> <span class="keyword">the</span> Podfile <span class="keyword">and</span> <span class="number">1</span> total</span><br><span class="line">pod installed.</span><br><span class="line">[!] Please close any current Xcode sessions <span class="keyword">and</span> use `KivaLoan.xcworkspace` <span class="keyword">for</span> this project <span class="keyword">from</span> now <span class="function_start"><span class="keyword">on</span>.</span></span><br><span class="line">Pod installation complete! There <span class="keyword">is</span> <span class="number">1</span> dependency <span class="keyword">from</span> <span class="keyword">the</span> Podfile <span class="keyword">and</span> <span class="number">1</span> total</span><br><span class="line">pod installed.</span><br></pre></td></tr></table></figure></p>
+<p>注意最后一句话，意思是：以后打开项目就用 .xcworkspace 打开，而不是之前的.xcodeproj文件。</p>
+<p>xcodeproj文件是你刚刚运行$ pod install命令产生的新文件。除了这个文件，你会发现还多了另外一个文件“Podfile.lock”和一个文件夹“Pods”。 点击 .xcworkspace 打开之后工程之后，项目Xcode目录结构，然后编译，看看是否出错。</p>
+<ul>
+<li><p>先在项目中创建Podfile，Podfile的内容是你想导入的类库。一般类库的原作者会告诉你导入该类库应该如何写Podfile；</p>
+</li>
+<li><p>运行命令：<code>$ pod install</code></p>
+</li>
+</ul>
+<h2 id="Cocoa__u65B0_u7684_u4F9D_u8D56_u7BA1_u7406_u5DE5_u5177_uFF1ACarthage"><a href="#Cocoa__u65B0_u7684_u4F9D_u8D56_u7BA1_u7406_u5DE5_u5177_uFF1ACarthage" class="headerlink" title="Cocoa 新的依赖管理工具：Carthage"></a>Cocoa 新的依赖管理工具：Carthage</h2><h3 id="u5B89_u88C5Carthage"><a href="#u5B89_u88C5Carthage" class="headerlink" title="安装Carthage"></a>安装Carthage</h3><ul>
+<li>推荐使用 <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a> 进行安装，简单方便，也便于维护：</li>
+</ul>
+<p><code>$ brew install carthage</code></p>
+<p>安装前最好先 update 一下</p>
+<p><code>$ brew update</code></p>
+<ul>
+<li>可以通过Carthage提供OS X平台的pkg安装文件，你可以从Github的<a href="https://github.com/Carthage/Carthage/releases" target="_blank" rel="external">最新release</a>中找到，按照引导一步步安装即可。<br>如果你想安装最新的开发版本（可能存在稳定性和兼容性的问题），你只需要clone本仓库的master分支，然后运行make install.</li>
+</ul>
+<h3 id="u5F00_u59CB_u4F7F_u7528Carthage"><a href="#u5F00_u59CB_u4F7F_u7528Carthage" class="headerlink" title="开始使用Carthage"></a>开始使用Carthage</h3><ol>
+<li>创建一个Cartfile，将你想要使用的框架列在里面<br><code>$ vim Cartfile</code></li>
+</ol>
+<p><code>$ github &quot;SwiftyJSON/SwiftyJSON&quot; &gt;= 2.1.2</code></p>
+<p><code>:wq</code></p>
+<ol>
+<li><p>运行<code>$ carthage update</code>，将获取依赖文件到一个Carthage.checkout文件夹，然后编译每个依赖.<br><del>暂只支持 GitHub 和 git 源，在执行命令后会在根目录创建一个 Cartfile.resolved 文件，这个文件是生成后的依赖关系，不能修改。</del></p>
+</li>
+<li><p>在你的应用程序target的“General”设置标签中的“Embedded Binaries”区域，将框架从Carthage.build文件夹拖拽进去。<br><del>在这个过程当中，Carthage将创建一些build artifacts，其中最重要的是Cartfile.lock文件，里面将列出每个框架的具体版本，确保你提交了这个文件到版本控制工具里面（如Git、SVN），因为每个用到项目的人都需要它来编译相同版本的框架。</del></p>
+</li>
+</ol>
+<p>完成上面的步骤并提交你的修改，项目的其他用户就只需要获取该仓库并执行carthage bootstrap就能使用你所添加的框架。</p>
+<h3 id="u5F15_u5165_Framework"><a href="#u5F15_u5165_Framework" class="headerlink" title="引入 Framework"></a>引入 Framework</h3><p>在项目中引入依赖的 Framkework，只需要在对应 Target 中的 Build Setting 中的 Framework Search Path 项加入以下路径，Xcode 便会自动搜索目录下的 Framework：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(</span><span class="constant">SRCROOT</span>)/<span class="constant">Carthage</span>/<span class="constant">Build</span>/iOS</span><br></pre></td></tr></table></figure>
+<p>如果是 OSX 项目则把末尾的 iOS 改为 Mac</p>
+<h3 id="u5728_Git__u4E2D_u5FFD_u7565"><a href="#u5728_Git__u4E2D_u5FFD_u7565" class="headerlink" title="在 Git 中忽略"></a>在 Git 中忽略</h3><p>如果不想把 Carthage 的依赖库 push 到 Git 仓库里，则修改 .gitignore 文件，增加忽略 Carthage 文件夹就行了：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#Carthage</span></span><br><span class="line">Carthage</span><br></pre></td></tr></table></figure>
+<p>参考文章：</p>
+<ol>
+<li><a href="http://www.isaced.com/post-265.html" target="_blank" rel="external">http://www.isaced.com/post-265.html</a></li>
+<li><a href="http://idlelife.org/archives/889" target="_blank" rel="external">http://idlelife.org/archives/889</a></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2015/12/09/Cocoa依赖管理工具/">Cocoa依赖管理工具</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 承宇 的个人博客">承宇</a></p>
+  <p><span>发布时间:</span>2015年12月09日 - 13时41分</p>
+  <p><span>最后更新:</span>2016年01月08日 - 21时31分</p>
+  <p>
+    <span>原始链接:</span><a href="/2015/12/09/Cocoa依赖管理工具/" title="Cocoa依赖管理工具">http://wangxinze.com/2015/12/09/Cocoa依赖管理工具/</a>
+    <span class="btn" data-clipboard-text="原文: http://wangxinze.com/2015/12/09/Cocoa依赖管理工具/　　作者: 承宇" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+    <div id="article-nav-newer" class="article-nav-title">
+      <a href="/2015/12/09/Foundation框架/">
+        Foundation框架
+      </a>
+    </div>
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2015/12/01/我们本可以学会去爱/">
+        我们本可以学会去爱
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4F9D_u8D56_u7BA1_u7406_u6807_u51C6_u5DE5_u5177CocoaPods"><span class="toc-number">1.</span> <span class="toc-text">依赖管理标准工具CocoaPods</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cocoa__u65B0_u7684_u4F9D_u8D56_u7BA1_u7406_u5DE5_u5177_uFF1ACarthage"><span class="toc-number">2.</span> <span class="toc-text">Cocoa 新的依赖管理工具：Carthage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5B89_u88C5Carthage"><span class="toc-number">2.1.</span> <span class="toc-text">安装Carthage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5F00_u59CB_u4F7F_u7528Carthage"><span class="toc-number">2.2.</span> <span class="toc-text">开始使用Carthage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5F15_u5165_Framework"><span class="toc-number">2.3.</span> <span class="toc-text">引入 Framework</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5728_Git__u4E2D_u5FFD_u7565"><span class="toc-number">2.4.</span> <span class="toc-text">在 Git 中忽略</span></a></li></ol></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/12/09/Cocoa依赖管理工具/" data-title="Cocoa依赖管理工具" data-url="http://wangxinze.com/2015/12/09/Cocoa依赖管理工具/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"judges321"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+  
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+
+  
+  
+    
+    <div  class="post-nav-button">
+    <a href="/2015/12/09/Foundation框架/" title="上一篇: Foundation框架">
+    <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="/2015/12/01/我们本可以学会去爱/" title="下一篇: 我们本可以学会去爱">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 承宇
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+<script>
+  var backgroundnum = 5;
+  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+
+  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+</script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>swift学习笔记 | 承宇的小窝</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Optionals下面的例子使用这种构造器来尝试将一个String转换成Int：
+123let possibleNumber = &quot;123&quot;let convertedNumber = Int(possibleNumber)// convertedNumber 被推测为类型 &quot;Int?&quot;， 或者类型 &quot;optional Int&quot;
+因为该构造器可能会失败，所以它返回一个可选类型（optional）In">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swift学习笔记">
+<meta property="og:url" content="http://wangxinze.com/2016/01/08/swift学习笔记/index.html">
+<meta property="og:site_name" content="承宇的小窝">
+<meta property="og:description" content="Optionals下面的例子使用这种构造器来尝试将一个String转换成Int：
+123let possibleNumber = &quot;123&quot;let convertedNumber = Int(possibleNumber)// convertedNumber 被推测为类型 &quot;Int?&quot;， 或者类型 &quot;optional Int&quot;
+因为该构造器可能会失败，所以它返回一个可选类型（optional）In">
+<meta property="og:updated_time" content="2016-01-08T13:38:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="swift学习笔记">
+<meta name="twitter:description" content="Optionals下面的例子使用这种构造器来尝试将一个String转换成Int：
+123let possibleNumber = &quot;123&quot;let convertedNumber = Int(possibleNumber)// convertedNumber 被推测为类型 &quot;Int?&quot;， 或者类型 &quot;optional Int&quot;
+因为该构造器可能会失败，所以它返回一个可选类型（optional）In">
+  
+    <link rel="alternative" href="/atom.xml" title="承宇的小窝" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/3.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">承宇</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">云霏霏而承宇</p>
+		
+				
+
+
+		
+			<div id="switch-btn" class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div id="switch-area" class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/">所有文章</a></li>
+				        
+							<li><a href="/tags/">标签云</a></li>
+				        
+							<li><a href="/about/">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:wangxinze@betahouse.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/judges321" title="GitHub"></a></li>
+					        
+						</ul>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/QRcode/" style="font-size: 10px;">QRcode</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zhouyutao.com">zhouyutao</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://huangbingbing.com">huangbingbing</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">专注于iOS</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">承宇</a></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img lazy-src="/img/3.png" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/" title="回到主页">承宇</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">云霏霏而承宇</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/">所有文章</a></li>
+		        
+					<li><a href="/tags/">标签云</a></li>
+		        
+					<li><a href="/about/">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+						<ul class="social">
+							
+								<li id="Email"><a class="Email" target="_blank" href="mailto:wangxinze@betahouse.com" title="Email"></a></li>
+					        
+								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/judges321" title="GitHub"></a></li>
+					        
+						</ul>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-swift学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/08/swift学习笔记/" class="article-date">
+  	<time datetime="2016-01-08T13:30:53.000Z" itemprop="datePublished">2016-01-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      swift学习笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+	</div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h2 id="Optionals"><a href="#Optionals" class="headerlink" title="Optionals"></a>Optionals</h2><p>下面的例子使用这种构造器来尝试将一个String转换成Int：</p>
+<figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> possibleNumber = <span class="string">"123"</span></span><br><span class="line"><span class="keyword">let</span> convertedNumber = <span class="built_in">Int</span>(possibleNumber)</span><br><span class="line">// convertedNumber 被推测为类型 <span class="string">"Int?"</span>， 或者类型 <span class="string">"optional Int"</span></span><br></pre></td></tr></table></figure>
+<p>因为该构造器可能会失败，所以它返回一个可选类型（optional）Int，而不是一个Int。一个可选的Int被写作Int?而不是Int。问号暗示包含的值是可选类型，也就是说可能包含Int值也可能不包含值。（不能包含其他任何值比如Bool值或者String值。只能是Int或者什么都没有。）</p>
+<blockquote>
+<p>Swift 中，nil不是指针——它是一个确定的值，用来表示值缺失。任何类型的可选状态都可以被设置为nil，不只是对象类型。</p>
+</blockquote>
+<h2 id="u7A7A_u5408_u8FD0_u7B97_u7B26_28Nil_Coalescing_Operator_29"><a href="#u7A7A_u5408_u8FD0_u7B97_u7B26_28Nil_Coalescing_Operator_29" class="headerlink" title="空合运算符(Nil Coalescing Operator)"></a>空合运算符(Nil Coalescing Operator)</h2><p>空合运算符(a ?? b)将对可选类型a进行空判断，如果a包含一个值就进行解封，否则就返回一个默认值b.这个运算符有两个条件:</p>
+<p>表达式a必须是Optional类型<br>默认值b的类型必须要和a存储值的类型保持一致<br>空合运算符是对以下代码的简短表达方法</p>
+<p><code>a != nil ? a! : b</code><br><a id="more"></a><br>上述代码使用了三目运算符。当可选类型a的值不为空时，进行强制解封(a!)访问a中值，反之当a中值为空时，返回默认值b。无疑空合运算符(??)提供了一种更为优雅的方式去封装条件判断和解封两种行为，显得简洁以及更具可读性。</p>
+<blockquote>
+<p>注意： 如果a为非空值(non-nil),那么值b将不会被估值。这也就是所谓的短路求值。<br>下文例子采用空合运算符，实现了在默认颜色名和可选自定义颜色名之间抉择：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> defaultColorName = <span class="string">"red"</span></span><br><span class="line"><span class="keyword">var</span> userDefinedColorName: <span class="built_in">String</span>?   <span class="comment">//默认值为 nil</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> colorNameToUse = userDefinedColorName ?? defaultColorName</span><br><span class="line"><span class="comment">// userDefinedColorName 的值为空，所以 colorNameToUse 的值为 "red"</span></span><br></pre></td></tr></table></figure>
+<p>userDefinedColorName变量被定义为一个可选String类型，默认值为nil。由于userDefinedColorName是一个可选类型，我们可以使用空合运算符去判断其值。在上一个例子中，通过空合运算符为一个名为colorNameToUse的变量赋予一个字符串类型初始值。 由于userDefinedColorName值为空，因此表达式userDefinedColorName ?? defaultColorName返回defaultColorName的值，即red。</p>
+<p>另一种情况，分配一个非空值(non-nil)给userDefinedColorName，再次执行空合运算，运算结果为封包在userDefaultColorName中的值，而非默认值。</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">user</span>DefinedColorName = <span class="string">"green"</span></span><br><span class="line">colorNameToUse = <span class="keyword">user</span>DefinedColorName ?? <span class="keyword">default</span>ColorName</span><br><span class="line">// <span class="keyword">user</span>DefinedColorName 非空，因此 colorNameToUse 的值为 <span class="string">"green"</span></span><br></pre></td></tr></table></figure>
+<p>AnyObject<br>和object－c的id类型一样，AnyObject被用于表示任意类型的对象。最大功能是实现swift和Cocoa框架的互通。</p>
+<p>为类和方法定义访问权限</p>
+<p>Public:既可以被模块内部的源文件使用，也可以被导入此模块的外部文件使用<br>Internal:只能由模块内部的源文件使用<br>private:只能在源文件内使用</p>
+<p>Cocoa Touch</p>
+<ol>
+<li>MapKit</li>
+<li>UIKit</li>
+<li>EventKit</li>
+<li>GameKit</li>
+<li>iAKit</li>
+<li>MessageKit</li>
+<li>AddressBookKit</li>
+<li>TwitterKit</li>
+</ol>
+<p>Core Services(核心服务层)</p>
+<ol>
+<li>Foundation</li>
+<li>Core Data</li>
+<li>WebKit、WatchKit、HomeKit、HealthKit</li>
+</ol>
+<h2 id="Foundation_u6846_u67B6"><a href="#Foundation_u6846_u67B6" class="headerlink" title="Foundation框架"></a>Foundation框架</h2><ol>
+<li>Class类</li>
+<li>Functions函数</li>
+<li>Constants:Foundation Framework中定义的常量，such as NSError Codes</li>
+</ol>
+<p>1.1 Data Storage</p>
+<p> NSData和NSString为字节数组，NSValue和NSNumber为数值数组，NSArray、NSObject和NSSet为对象</p>
+<p>1.2 Text and String<br>NSCharacter代表多种NSString和NSScanner使用的字符分组，NSString提供代表文字的字符串，并提供搜索，合并，比较等操作方法，NSScanner用来在NSString对象中查找数组单词</p>
+<p>1.3 data and times<br>NSFormatter的用途是“将数据在字符串与特定类型的对象之间转换”<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">var</span> date = <span class="function"><span class="title">NSDate</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">//创建格式化器</span></span><br><span class="line"><span class="tag">var</span> dateFormatter = <span class="function"><span class="title">NSDateFormatter</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">//设置格式化模版</span></span><br><span class="line">dateFormatter.<span class="function"><span class="title">setLocalizedDateFormatFromTemplate</span><span class="params">(<span class="string">"MM/dd/yyyy HH:mm:ss"</span>)</span></span></span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(dateFormatter.stringFromDate(date)</span></span>)</span><br></pre></td></tr></table></figure></p>
+<p>1.4 Application coordination and timing(应用程序协作及定时器)</p>
+<p>UI框架MFC、QT、WTL或者WPF最骨架部分为消息管理系统，称之为消息泵（Message Pump),NSTimer、NSNotificationCenter模拟消息泵</p>
+<p>1.5 Operating-system services(操作系统底层服务)</p>
+<p>NSFileManager用于提供一个文件操作（增删改）的一致借口，NSThread和NSProcessInfo是我们能够创建多线程应用和请求应用运行时环境。耗时的工作放在后台工作线程里完成，放主线程里会卡死。iOS线程技术NSThread和NSOperation和GCD（Grand Center Dispatch）<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OCMessagePump</span>: <span class="title">NSObject</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> timer:<span class="type">NSTimer</span>?</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> <span class="built_in">count</span> = <span class="number">0</span></span><br><span class="line">    <span class="func"><span class="keyword">func</span> <span class="title">start</span><span class="params">()</span></span>&#123;</span><br><span class="line">        timer = <span class="type">NSTimer</span>.scheduledTimerWithTimeInterval(<span class="number">10</span>,target:<span class="keyword">self</span>,selector: <span class="string">"timerFireMethod"</span>,userInfo:<span class="literal">nil</span>,repeats: <span class="literal">true</span>)</span><br><span class="line">        timer!.fire()</span><br><span class="line">        <span class="type">NSRunLoop</span>.mainRunLoop().addTimer(timer!, forMode: <span class="type">NSDefaultRunLoopMode</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="func"><span class="keyword">func</span> <span class="title">stop</span><span class="params">()</span></span>&#123;</span><br><span class="line">        timer!.invalidate()</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="func"><span class="keyword">func</span> <span class="title">timerFireMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"收到消息泵定时派发命令.处理控件消息：OCButtonClick消息！"</span>)</span><br><span class="line">        <span class="type">NSNotificationCenter</span>.defaultCenter().postNotificationName(<span class="string">"OCButtonClicked"</span>, object: <span class="literal">nil</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">count</span>++ &gt; <span class="number">10</span> &#123;</span><br><span class="line">            <span class="keyword">self</span>.stop()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OCButton</span> : <span class="title">NSObject</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">init</span>()&#123;</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>()</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        <span class="type">NSNotificationCenter</span>.defaultCenter().addObserver(<span class="keyword">self</span>, selector: <span class="string">"ButtonClicked"</span>, name: <span class="string">"OCButtonClicked"</span>, object: <span class="literal">nil</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="func"><span class="keyword">func</span> <span class="title">ButtonClicked</span><span class="params">(notify:NSNotification)</span></span>&#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"收到消息泵通知，当前按钮被单击"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> button = <span class="type">OCButton</span>()</span><br><span class="line"><span class="keyword">var</span> ocMessagePump = <span class="type">OCMessagePump</span>()</span><br><span class="line">ocMessagePump.start()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> date = <span class="type">NSDate</span>()</span><br><span class="line">    <span class="type">NSRunLoop</span>.currentRunLoop().runUntilDate(date.dateByAddingTimeInterval(<span class="number">100</span>))</span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>1.6 URL Loading System（网络功能）</p>
+<p>AFNetworking第三方库，网络功能的第三次封装<br>Alamofire</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="copyright">
+  <p><span>本文标题:</span><a href="/2016/01/08/swift学习笔记/">swift学习笔记</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 承宇 的个人博客">承宇</a></p>
+  <p><span>发布时间:</span>2016年01月08日 - 21时30分</p>
+  <p><span>最后更新:</span>2016年01月08日 - 21时38分</p>
+  <p>
+    <span>原始链接:</span><a href="/2016/01/08/swift学习笔记/" title="swift学习笔记">http://wangxinze.com/2016/01/08/swift学习笔记/</a>
+    <span class="btn" data-clipboard-text="原文: http://wangxinze.com/2016/01/08/swift学习笔记/　　作者: 承宇" title="点击复制文章链接">
+        <i class="fa fa-clipboard"></i>
+    </span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。</p>
+  <script src="/js/clipboard.min.js"></script>
+  <script> var clipboard = new Clipboard('.btn'); </script>
+</div>
+<style type="text/css">
+  .copyright p .btn {
+    margin-left: 1em;
+  }
+  .copyright:hover p .btn::after {
+    content: "复制"
+  }
+  .copyright p .btn:hover {
+      color: gray;
+      cursor: pointer;
+    };
+</style>
+
+
+
+<nav id="article-nav">
+  
+    <div id="article-nav-newer" class="article-nav-title">
+      <a href="/2016/01/08/二维码的扫描(QRcode)/">
+        二维码的扫描(QRcode)
+      </a>
+    </div>
+  
+  
+    <div id="article-nav-older" class="article-nav-title">
+      <a href="/2015/12/09/Foundation框架/">
+        Foundation框架
+      </a>
+    </div>
+  
+</nav>
+
+  
+</article>
+
+<!-- 默认显示文章目录，在文章---前输入toc: false关闭目录 -->
+<!-- Show TOC and tocButton in default, Hide TOC via putting "toc: false" before "---" at [post].md -->
+<div id="toc" class="toc-article">
+<strong class="toc-title">文章目录</strong>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Optionals"><span class="toc-number">1.</span> <span class="toc-text">Optionals</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7A7A_u5408_u8FD0_u7B97_u7B26_28Nil_Coalescing_Operator_29"><span class="toc-number">2.</span> <span class="toc-text">空合运算符(Nil Coalescing Operator)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Foundation_u6846_u67B6"><span class="toc-number">3.</span> <span class="toc-text">Foundation框架</span></a></li></ol>
+</div>
+<style type="text/css">
+  .left-col .switch-btn {
+    display: none;
+  }
+  .left-col .switch-area {
+    display: none;
+  }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script type="text/javascript">
+  var toc_button= document.getElementById("tocButton");
+  var toc_div= document.getElementById("toc");
+  /* Show or hide toc when click on tocButton.
+  通过点击设置的按钮显示或者隐藏文章目录.*/
+  toc_button.onclick=function(){
+  if(toc_div.style.display=="none"){
+  toc_div.style.display="block";
+  toc_button.value="隐藏目录";
+  document.getElementById("switch-btn").style.display="none";
+  document.getElementById("switch-area").style.display="none";
+  }
+  else{
+  toc_div.style.display="none";
+  toc_button.value="显示目录";
+  document.getElementById("switch-btn").style.display="block";
+  document.getElementById("switch-area").style.display="block";
+  }
+  }
+</script>
+
+
+<div class="share">
+	<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+	<a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+	<a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+	</div>
+	<script>
+	window._bd_share_config={
+		"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/01/08/swift学习笔记/" data-title="swift学习笔记" data-url="http://wangxinze.com/2016/01/08/swift学习笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"judges321"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+  
+
+
+    <style type="text/css">
+    #scroll {
+      display: none;
+    }
+    </style>
+    <div class="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#ds-thread" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    </div>
+
+
+
+  
+  
+    
+    <div  class="post-nav-button">
+    <a href="/2016/01/08/二维码的扫描(QRcode)/" title="上一篇: 二维码的扫描(QRcode)">
+    <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="/2015/12/09/Foundation框架/" title="下一篇: Foundation框架">
+    <i class="fa fa-angle-right"></i>
+    </a>
+    </div>
+  
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2016 承宇
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+        </div>
+    </div>
+    <div class="visit">
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="site-visit" >本站到访数: 
+        <span id="busuanzi_value_site_uv"></span>
+        </span>
+      </span>
+      <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit">, 本页阅读量: 
+        <span id="busuanzi_value_page_pv"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+<script>
+  var backgroundnum = 5;
+  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+
+  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+</script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
