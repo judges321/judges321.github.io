@@ -20,175 +20,203 @@
   
     <link rel="icon" href="/favicon.png">
   
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
 </head>
 <body>
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="/img/3.png" class="js-avatar">
-			
-		</a>
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">承宇</a></h1>
-		</hgroup>
+        <hgroup>
+          <h1 class="header-author"><a href="/">承宇</a></h1>
+        </hgroup>
 
-		
-		<p class="header-subtitle">云霏霏而承宇</p>
-		
-				
+        
+        <p class="header-subtitle">云霏霏而承宇</p>
+        
+                
 
 
-		
-			<div id="switch-btn" class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						<li>友情链接</li>
-						
-						
-						<li>关于我</li>
-						
-					</ul>
-				</div>
-			</div>
-		
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
 
-		<div id="switch-area" class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives/">所有文章</a></li>
-				        
-							<li><a href="/tags/">标签云</a></li>
-				        
-							<li><a href="/about/">关于我</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<ul class="social">
-							
-								<li id="Email"><a class="Email" target="_blank" href="mailto:wangxinze@betahouse.com" title="Email"></a></li>
-					        
-								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/judges321" title="GitHub"></a></li>
-					        
-						</ul>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/QRcode/" style="font-size: 10px;">QRcode</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zhouyutao.com">zhouyutao</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://huangbingbing.com">huangbingbing</a>
-			        
-			        </div>
-				</section>
-				
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="/#" title="GitHub"></a></li>
+                            
+                                <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/QRcode/" style="font-size: 10px;">QRcode</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
 
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">专注于iOS</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
 </div>
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">承宇</a></h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<a href="/" class="profilepic">
-				<img lazy-src="/img/3.png" class="js-avatar">
-			</a>
-			<hgroup>
-			  <h1 class="header-author"><a href="/" title="回到主页">承宇</a></h1>
-			</hgroup>
-			
-			<p class="header-subtitle">云霏霏而承宇</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives/">所有文章</a></li>
-		        
-					<li><a href="/tags/">标签云</a></li>
-		        
-					<li><a href="/about/">关于我</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-						<ul class="social">
-							
-								<li id="Email"><a class="Email" target="_blank" href="mailto:wangxinze@betahouse.com" title="Email"></a></li>
-					        
-								<li id="GitHub"><a class="GitHub" target="_blank" href="https://github.com/judges321" title="GitHub"></a></li>
-					        
-						</ul>
-			</nav>
-		</header>				
-	</div>
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">承宇</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img lazy-src="/img/avatar.png" class="js-avatar">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">承宇</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">云霏霏而承宇</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="/#" title="GitHub"></a></li>
+                            
+                                <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
 </nav>
       <div class="body-wrap">
   
@@ -196,7 +224,7 @@
   
     <div class="article-meta">
       <a href="/2016/01/08/二维码的扫描(QRcode)/" class="article-date">
-  	<time datetime="2016-01-08T13:46:18.000Z" itemprop="datePublished">2016-01-08</time>
+      <time datetime="2016-01-08T13:46:18.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
     </div>
   
@@ -218,11 +246,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="u4EC0_u4E48_u662FQR_u7801_uFF1F"><a href="#u4EC0_u4E48_u662FQR_u7801_uFF1F" class="headerlink" title="什么是QR码？"></a>什么是QR码？</h2><p>来自维基百科的解释</p>
+          
+              <h2 id="u4EC0_u4E48_u662FQR_u7801_uFF1F"><a href="#u4EC0_u4E48_u662FQR_u7801_uFF1F" class="headerlink" title="什么是QR码？"></a>什么是QR码？</h2><p>来自维基百科的解释</p>
 <blockquote>
 <p>QR码（全称为快速响应矩阵码；英语：Quick Response Code）是二维条码的一种，于1994年由日本DENSO WAVE公司发明。QR来自英文Quick Response的缩写，即快速反应，因为发明者希望QR码可以让其内容快速被解码[1]。QR码使用四种标准化编码模式（数字，字母数字，字节（二进制）和汉字）来存储数据。QR码最常见于日本，为目前日本最流行的二维空间条码。QR码比较普通条码可以存储更多数据，也无需要像普通条码般在扫描时需要直线对准扫描仪。因此其应用范围已经扩展到包括产品跟踪，物品识别，文档管理，营销等方面。 </p>
 </blockquote>
 <p>您可以生成自己的QR码。简单地去<a href="http://www.qrcode-monkey.com">http://www.qrcode-monkey.com</a>创建一个。<br>
+          
       
     </div>
     
@@ -231,9 +261,9 @@
       
 
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRcode/">QRcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
-	</div>
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QRcode/">QRcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
@@ -251,36 +281,15 @@
 
 
 
-  
 
 
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
 
   
     <article id="post-swift学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/01/08/swift学习笔记/" class="article-date">
-  	<time datetime="2016-01-08T13:30:53.000Z" itemprop="datePublished">2016-01-08</time>
+      <time datetime="2016-01-08T13:30:53.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
     </div>
   
@@ -302,7 +311,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Optionals"><a href="#Optionals" class="headerlink" title="Optionals"></a>Optionals</h2><p>下面的例子使用这种构造器来尝试将一个String转换成Int：</p>
+          
+              <h2 id="Optionals"><a href="#Optionals" class="headerlink" title="Optionals"></a>Optionals</h2><p>下面的例子使用这种构造器来尝试将一个String转换成Int：</p>
 <figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> possibleNumber = <span class="string">"123"</span></span><br><span class="line"><span class="keyword">let</span> convertedNumber = <span class="built_in">Int</span>(possibleNumber)</span><br><span class="line">// convertedNumber 被推测为类型 <span class="string">"Int?"</span>， 或者类型 <span class="string">"optional Int"</span></span><br></pre></td></tr></table></figure>
 <p>因为该构造器可能会失败，所以它返回一个可选类型（optional）Int，而不是一个Int。一个可选的Int被写作Int?而不是Int。问号暗示包含的值是可选类型，也就是说可能包含Int值也可能不包含值。（不能包含其他任何值比如Bool值或者String值。只能是Int或者什么都没有。）</p>
 <blockquote>
@@ -311,6 +321,7 @@
 <h2 id="u7A7A_u5408_u8FD0_u7B97_u7B26_28Nil_Coalescing_Operator_29"><a href="#u7A7A_u5408_u8FD0_u7B97_u7B26_28Nil_Coalescing_Operator_29" class="headerlink" title="空合运算符(Nil Coalescing Operator)"></a>空合运算符(Nil Coalescing Operator)</h2><p>空合运算符(a ?? b)将对可选类型a进行空判断，如果a包含一个值就进行解封，否则就返回一个默认值b.这个运算符有两个条件:</p>
 <p>表达式a必须是Optional类型<br>默认值b的类型必须要和a存储值的类型保持一致<br>空合运算符是对以下代码的简短表达方法</p>
 <p><code>a != nil ? a! : b</code><br>
+          
       
     </div>
     
@@ -319,9 +330,9 @@
       
 
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
-	</div>
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
@@ -339,36 +350,15 @@
 
 
 
-  
 
 
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
 
   
     <article id="post-Foundation框架" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/12/09/Foundation框架/" class="article-date">
-  	<time datetime="2015-12-09T05:43:18.000Z" itemprop="datePublished">2015-12-09</time>
+      <time datetime="2015-12-09T05:43:18.000Z" itemprop="datePublished">2015-12-09</time>
 </a>
     </div>
   
@@ -390,7 +380,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Foundation_u6846_u67B6"><a href="#Foundation_u6846_u67B6" class="headerlink" title="Foundation框架"></a>Foundation框架</h2><ol>
+          
+              <h2 id="Foundation_u6846_u67B6"><a href="#Foundation_u6846_u67B6" class="headerlink" title="Foundation框架"></a>Foundation框架</h2><ol>
 <li>Class类</li>
 <li>Functions函数</li>
 <li>Constants:Foundation Framework中定义的常量，such as NSError Codes</li>
@@ -399,6 +390,7 @@
 <p>NSData和NSString为字节数组，NSValue和NSNumber为数值数组，NSArray、NSObject和NSSet为对象</p>
 <p>1.2 Text and String<br>NSCharacter代表多种NSString和NSScanner使用的字符分组，NSString提供代表文字的字符串，并提供搜索，合并，比较等操作方法，NSScanner用来在NSString对象中查找数组单词</p>
 <p>1.3 data and times<br>NSFormatter的用途是“将数据在字符串与特定类型的对象之间转换”<br>
+          
       
     </div>
     
@@ -423,36 +415,15 @@
 
 
 
-  
 
 
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
 
   
     <article id="post-Cocoa依赖管理工具" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/12/09/Cocoa依赖管理工具/" class="article-date">
-  	<time datetime="2015-12-09T05:41:53.000Z" itemprop="datePublished">2015-12-09</time>
+      <time datetime="2015-12-09T05:41:53.000Z" itemprop="datePublished">2015-12-09</time>
 </a>
     </div>
   
@@ -474,13 +445,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="u4F9D_u8D56_u7BA1_u7406_u6807_u51C6_u5DE5_u5177CocoaPods"><a href="#u4F9D_u8D56_u7BA1_u7406_u6807_u51C6_u5DE5_u5177CocoaPods" class="headerlink" title="依赖管理标准工具CocoaPods"></a>依赖管理标准工具CocoaPods</h2><p>在终端中进入（cd命令）你项目所在目录，然后在当前目录下，利用vim创建Podfile，运行：</p>
+          
+              <h2 id="u4F9D_u8D56_u7BA1_u7406_u6807_u51C6_u5DE5_u5177CocoaPods"><a href="#u4F9D_u8D56_u7BA1_u7406_u6807_u51C6_u5DE5_u5177CocoaPods" class="headerlink" title="依赖管理标准工具CocoaPods"></a>依赖管理标准工具CocoaPods</h2><p>在终端中进入（cd命令）你项目所在目录，然后在当前目录下，利用vim创建Podfile，运行：</p>
 <p><code>$ vim Podfile</code></p>
 <p>然后在Podfile文件中输入以下文字：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">platform <span class="symbol">:ios</span>, <span class="string">'8.0'</span></span><br><span class="line">use_frameworks!</span><br><span class="line">target ‘<span class="constant">MyApp’</span> <span class="keyword">do</span></span><br><span class="line">pod <span class="string">'Alamofire'</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
 <p>这段文字可以在Alamofire的github页面找到。</p>
 <p>然后按ESC保存退出。vim环境下，保存退出命令是：</p>
 <p><code>:wq</code></p>
 <p>这时候，你会发现你的项目目录中，出现一个名字为Podfile的文件，而且文件内容就是你刚刚输入的内容。注意，Podfile文件应该和你的工程文件.xcodeproj在同一个目录下。</p>
+          
       
     </div>
     
@@ -489,9 +462,9 @@
       
 
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
-	</div>
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
@@ -509,36 +482,15 @@
 
 
 
-  
 
 
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
 
   
     <article id="post-我们本可以学会去爱" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/12/01/我们本可以学会去爱/" class="article-date">
-  	<time datetime="2015-12-01T01:07:07.000Z" itemprop="datePublished">2015-12-01</time>
+      <time datetime="2015-12-01T01:07:07.000Z" itemprop="datePublished">2015-12-01</time>
 </a>
     </div>
   
@@ -560,8 +512,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#160; &#160; &#160; &#160;悲欢离合的爱情电影很多人百看不厌，听着重复的爱情歌曲，总是想着：我会被爱吗？我如何才能值得被人爱？为此，男人追名逐利，女人打扮得有魅力，而男女都喜欢的方式是文雅的举止，有趣的谈吐，乐与助人，谦虚，无非是为了赢得人心和对异性有吸引力。他们认为爱本身十分简单，困难在于找到爱的对象或被爱的对象。</p>
+          
+              <p>&#160; &#160; &#160; &#160;悲欢离合的爱情电影很多人百看不厌，听着重复的爱情歌曲，总是想着：我会被爱吗？我如何才能值得被人爱？为此，男人追名逐利，女人打扮得有魅力，而男女都喜欢的方式是文雅的举止，有趣的谈吐，乐与助人，谦虚，无非是为了赢得人心和对异性有吸引力。他们认为爱本身十分简单，困难在于找到爱的对象或被爱的对象。</p>
 <p>&#160; &#160; &#160; &#160;当代文化以互利互换为观念。现代人的幸福用现金等方式购买力所能及的东西。<br>我想做笔交易，我既要考虑从社会价值的角度出发，对方值不值得我追求，也要考虑我一目了然的实力以及潜在实力（就如同我经常听到的你是潜力股(♯｀∧´)），对方会不会看中我。男女考虑互相的交换价值，找到最合适的对象。不得不承认商业化现代文化对我们的影响。（不知不觉就被洗脑了，真是防不慎防）<br>
+          
       
     </div>
     
@@ -570,9 +524,9 @@
       
 
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/碎碎念/">碎碎念</a></li></ul>
-	</div>
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/碎碎念/">碎碎念</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
@@ -590,36 +544,15 @@
 
 
 
-  
 
 
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
 
   
     <article id="post-json数据的解析（ios）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/11/27/json数据的解析（ios）/" class="article-date">
-  	<time datetime="2015-11-27T08:04:45.000Z" itemprop="datePublished">2015-11-27</time>
+      <time datetime="2015-11-27T08:04:45.000Z" itemprop="datePublished">2015-11-27</time>
 </a>
     </div>
   
@@ -641,11 +574,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JSON_u7B80_u4ECB"><a href="#JSON_u7B80_u4ECB" class="headerlink" title="JSON简介"></a>JSON简介</h2><p>JSON是一种轻量级的数据交换语言，以文字为基础，且易于让人阅读。尽管JSON是Javascript的一个子集，但JSON是独立于语言的文本格式，并且采用了类似于C语言家族的一些习惯。<br>iOS的SDK已经使开发人员可以轻松获取并解析JSON数据。它配备了一个方便的类称为NSJSONSerialization，它可以自动转换成JSON格式的数据对象。（iOS5发布）<br>这里提供一个豆瓣电影top250的API：<a href="https://api.douban.com/v2/movie/top250">https://api.douban.com/v2/movie/top250</a></p>
+          
+              <h2 id="JSON_u7B80_u4ECB"><a href="#JSON_u7B80_u4ECB" class="headerlink" title="JSON简介"></a>JSON简介</h2><p>JSON是一种轻量级的数据交换语言，以文字为基础，且易于让人阅读。尽管JSON是Javascript的一个子集，但JSON是独立于语言的文本格式，并且采用了类似于C语言家族的一些习惯。<br>iOS的SDK已经使开发人员可以轻松获取并解析JSON数据。它配备了一个方便的类称为NSJSONSerialization，它可以自动转换成JSON格式的数据对象。（iOS5发布）<br>这里提供一个豆瓣电影top250的API：<a href="https://api.douban.com/v2/movie/top250">https://api.douban.com/v2/movie/top250</a></p>
 <hr>
 <h2 id="u521B_u5EFA_u7C7B_u7528_u4E8E_u4FDD_u5B58_u6240_u9700_u5B57_u6BB5"><a href="#u521B_u5EFA_u7C7B_u7528_u4E8E_u4FDD_u5B58_u6240_u9700_u5B57_u6BB5" class="headerlink" title="创建类用于保存所需字段"></a>创建类用于保存所需字段</h2><p>用swift File创建新类movie命名为movie.swift<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Movie</span> </span>&#123;</span><br><span class="line">    <span class="variable"><span class="keyword">var</span> title</span>:String = <span class="string">""</span></span><br><span class="line">    <span class="variable"><span class="keyword">var</span> genres</span>:String = <span class="string">""</span></span><br><span class="line">    <span class="variable"><span class="keyword">var</span> averager</span>:<span class="typename">Double</span> = <span class="number">0.0</span></span><br><span class="line">    <span class="variable"><span class="keyword">var</span> year</span>:String = <span class="string">""</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h2 id="NSURLSession_u7F51_u7EDC_u901A_u4FE1http"><a href="#NSURLSession_u7F51_u7EDC_u901A_u4FE1http" class="headerlink" title="NSURLSession网络通信http"></a>NSURLSession网络通信http</h2>
+          
       
     </div>
     
@@ -654,9 +589,9 @@
       
 
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
-	</div>
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
@@ -674,36 +609,15 @@
 
 
 
-  
 
 
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
 
   
     <article id="post-iOS-animation" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/11/23/iOS-animation/" class="article-date">
-  	<time datetime="2015-11-23T14:04:34.000Z" itemprop="datePublished">2015-11-23</time>
+      <time datetime="2015-11-23T14:04:34.000Z" itemprop="datePublished">2015-11-23</time>
 </a>
     </div>
   
@@ -725,9 +639,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="iOS_u52A8_u753B_u8BBE_u8BA1"><a href="#iOS_u52A8_u753B_u8BBE_u8BA1" class="headerlink" title="iOS动画设计"></a>iOS动画设计</h1><h2 id="u52A8_u753B_u76843_u4E2A_u5173_u952E_uFF1A_u8FC7_u6E21_uFF0C_u91CD_u70B9_uFF0C_u8DA3_u5473_u6027"><a href="#u52A8_u753B_u76843_u4E2A_u5173_u952E_uFF1A_u8FC7_u6E21_uFF0C_u91CD_u70B9_uFF0C_u8DA3_u5473_u6027" class="headerlink" title="动画的3个关键：过渡，重点，趣味性"></a>动画的3个关键：过渡，重点，趣味性</h2><p>过渡(Transition)：要突出两个可视状态之间的平稳运动，使得用户可以成为适应新的屏幕，而不只是显示它。平稳过渡，简化了一个陌生的界面对用户的精神负担。</p>
+          
+              <h1 id="iOS_u52A8_u753B_u8BBE_u8BA1"><a href="#iOS_u52A8_u753B_u8BBE_u8BA1" class="headerlink" title="iOS动画设计"></a>iOS动画设计</h1><h2 id="u52A8_u753B_u76843_u4E2A_u5173_u952E_uFF1A_u8FC7_u6E21_uFF0C_u91CD_u70B9_uFF0C_u8DA3_u5473_u6027"><a href="#u52A8_u753B_u76843_u4E2A_u5173_u952E_uFF1A_u8FC7_u6E21_uFF0C_u91CD_u70B9_uFF0C_u8DA3_u5473_u6027" class="headerlink" title="动画的3个关键：过渡，重点，趣味性"></a>动画的3个关键：过渡，重点，趣味性</h2><p>过渡(Transition)：要突出两个可视状态之间的平稳运动，使得用户可以成为适应新的屏幕，而不只是显示它。平稳过渡，简化了一个陌生的界面对用户的精神负担。</p>
 <p>重点(Focus)：将用户的注意力吸引到界面，很重要的或最近更新的，特别是需要马上吸引用户注意的</p>
 <p>趣味性(Delight)：通过使用奇思妙想或令人意外的运动，使一个原本平常的互动更具吸引力和趣味性。</p>
+          
       
     </div>
     
@@ -736,9 +652,9 @@
       
 
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/animation/">animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
-	</div>
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/animation/">animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
@@ -756,36 +672,15 @@
 
 
 
-  
 
 
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
 
   
     <article id="post-php-study" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/08/16/php-study/" class="article-date">
-  	<time datetime="2015-08-16T05:26:51.000Z" itemprop="datePublished">2015-08-16</time>
+      <time datetime="2015-08-16T05:26:51.000Z" itemprop="datePublished">2015-08-16</time>
 </a>
     </div>
   
@@ -807,7 +702,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="u642D_u5EFA_u535A_u5BA2_u603B_u7ED3_u6280_u672F_u6587_u6863"><a href="#u642D_u5EFA_u535A_u5BA2_u603B_u7ED3_u6280_u672F_u6587_u6863" class="headerlink" title="搭建博客总结技术文档"></a>搭建博客总结技术文档</h1><h2 id="php_u4E0Emysql_u5173_u7CFB"><a href="#php_u4E0Emysql_u5173_u7CFB" class="headerlink" title="php与mysql关系"></a>php与mysql关系</h2><ul>
+          
+              <h1 id="u642D_u5EFA_u535A_u5BA2_u603B_u7ED3_u6280_u672F_u6587_u6863"><a href="#u642D_u5EFA_u535A_u5BA2_u603B_u7ED3_u6280_u672F_u6587_u6863" class="headerlink" title="搭建博客总结技术文档"></a>搭建博客总结技术文档</h1><h2 id="php_u4E0Emysql_u5173_u7CFB"><a href="#php_u4E0Emysql_u5173_u7CFB" class="headerlink" title="php与mysql关系"></a>php与mysql关系</h2><ul>
 <li><p>连接数据库</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$con</span> = mysql_connect(<span class="string">'localhost'</span>,<span class="string">'root'</span>,<span class="string">''</span>)</span><br><span class="line"><span class="comment">//$con = mysql_connect(域名,username,password,datebase数据库名)</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -815,6 +711,7 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql_close(<span class="variable">$con</span>);</span><br><span class="line"><span class="comment">//$con是连接标识符</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+          
       
     </div>
     
@@ -823,9 +720,9 @@
       
 
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
-	</div>
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
@@ -843,112 +740,72 @@
 
 
 
-  
 
 
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
 
   
   
 </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-      <div class="footer-left">
-        &copy; 2016 承宇
-      </div>
-        <div class="footer-right">
-          <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 承宇
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的静态博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减双栏 Hexo 博客主题">Yelee</a> by MOxFIVE
+            </div>
+        </div>
+        <div class="visit">
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <span id="site-visit" >本站到访数: 
+                    <span id="busuanzi_value_site_uv"></span>
+                </span>
+            </span>
+            <span id="busuanzi_container_page_pv" style='display:none'>
+                <span id="page-visit">, 本页阅读量: 
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+            </span>
         </div>
     </div>
-    <div class="visit">
-      <span id="busuanzi_container_site_pv" style='display:none'>
-        <span id="site-visit" >本站到访数: 
-        <span id="busuanzi_value_site_uv"></span>
-        </span>
-      </span>
-      <span id="busuanzi_container_page_pv" style='display:none'>
-        <span id="page-visit">, 本页阅读量: 
-        <span id="busuanzi_value_page_pv"></span>
-        </span>
-      </span>
-    </div>
-  </div>
 </footer>
     </div>
-    
-	<script>
-		var yiliaConfig = {
-			fancybox: false,
-			mathjax: true,
-			animate: true,
-			isHome: true,
-			isPost: false,
-			isArchive: false,
-			isTag: false,
-			isCategory: false,
-			open_in_new: false
-		}
-	</script>
-
-
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="/js/main.js" type="text/javascript"></script>
 
-<script>
-  var backgroundnum = 5;
-  var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
-  $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-</script>
 
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
 <div class="scroll" id="scroll">
-<a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-<a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
+
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
